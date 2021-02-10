@@ -1,0 +1,29 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class ListaMaior {
+
+	public static void main(String args[]) {
+		
+		LinkedList<Integer> lista = new LinkedList<Integer>();
+		Scanner scan = new Scanner (System.in);
+		
+		System.out.print("\tDigite 4 Valores Inteiros para Encontrar o Maior:\n\nNúmero 1: ");
+		lista.add(scan.nextInt());
+		System.out.print("Número 2: ");
+		lista.add(scan.nextInt());
+		System.out.print("Número 3: ");
+		lista.add(scan.nextInt());
+		System.out.print("Número 4: ");
+		lista.add(scan.nextInt());
+		
+		Integer maior = 0;
+
+		for (Integer a : lista)
+			if (maior < a)
+				maior = a;
+		
+		System.out.print("\nMaior: "+ maior);
+	}
+
+}
