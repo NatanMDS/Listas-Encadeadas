@@ -1,0 +1,28 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class ListaSoma {
+
+	public static void main(String args[]) {
+		
+		LinkedList<Integer> lista = new LinkedList<Integer>();
+		Scanner scan = new Scanner (System.in);
+		
+		System.out.print("\tDigite 4 Valores Inteiros para Somá-los:\n\nNúmero 1: ");
+		lista.add(scan.nextInt());
+		System.out.print("Número 2: ");
+		lista.add(scan.nextInt());
+		System.out.print("Número 3: ");
+		lista.add(scan.nextInt());
+		System.out.print("Número 4: ");
+		lista.add(scan.nextInt());
+		
+		Integer total = 0;
+
+		for (Integer a : lista)
+			total = total + a;
+		
+		System.out.print("\nResultado: "+ total);
+	}
+
+}
